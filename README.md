@@ -23,13 +23,13 @@ This add-on aims to transform object naming from a source of clutter into a stre
 
 ### Installation
 
-1.  **Download:** Obtain the `custom_duplicate.py` file from this repository.
+1.  **Download:** Obtain the `DuplicationRenamer.py` file from this repository.
 
 2.  **Blender Preferences:** In Blender, navigate to `Edit > Preferences > Add-ons`.
 
-3.  **Install:** Click `Install...` and select the downloaded `custom_duplicate.py` file.
+3.  **Install:** Click `Install...` and select the downloaded `DuplicationRenamer.py` file.
 
-4.  **Enable:** Activate the add-on by checking the box next to "Object: Custom Duplicate Prefix."
+4.  **Enable:** Activate the add-on.
 
 ---
 
@@ -51,7 +51,7 @@ Upon successful installation and activation, the add-on is fully operational.
 
     * Select the object(s) intended for duplication.
 
-    * Press `Shift+D`. The newly duplicated object will now incorporate the custom prefix (e.g., `Cube_variant_001`, `Sphere_variant_002`).
+    * Press `Shift+D`. The newly duplicated object will now incorporate the custom prefix (e.g., `Cube_variant_1`, `Sphere_variant_2`).
 
 **Note:** If the prefix field remains empty, the add-on will default to a simple incrementing number without any specific prefix, maintaining a similar behavior to Blender's default but under the management of this add-on.
 
