@@ -120,7 +120,7 @@ class DUPLICATION_RENAME_PT_panel(bpy.types.Panel):
     bl_idname = "DUPLICATION_RENAME_PT_panel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = "Tools"
+    bl_category = "VAD Tools"
     def draw(self, context):
         layout = self.layout
         prefs_data = context.preferences.addons.get(__name__)
