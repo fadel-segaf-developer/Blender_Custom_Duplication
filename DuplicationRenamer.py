@@ -1,3 +1,8 @@
+# Copyright (c) 2025 - VAD 
+#
+# This add-on is licensed under the MIT License.
+# See the LICENSE file for details.
+
 import bpy
 import re
 
