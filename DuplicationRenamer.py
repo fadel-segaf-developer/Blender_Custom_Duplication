@@ -3,10 +3,10 @@ import re
 
 bl_info = {
     "name": "Duplication Renamer",
-    "author": "BOJ",
+    "author": "VAD",
     "version": (1, 0, 27), 
     "blender": (4, 4, 0),
-    "location": "3D Viewport > Sidebar > BOJ Tools",
+    "location": "3D Viewport > Sidebar > VAD Tools",
     "description": "Custom duplication and rename logic with pattern configuration.",
     "category": "Object",
 }
@@ -115,12 +115,12 @@ class OBJECT_OT_ultimateKeybind(bpy.types.Operator):
         return {'FINISHED'}
 
 # Panel in 3D Viewport Sidebar
-class BOJ_DUPLICATION_RENAME_PT_panel(bpy.types.Panel):
-    bl_label = "BOJ Duplication"
-    bl_idname = "BOJ_DUPLICATION_RENAME_PT_panel"
+class DUPLICATION_RENAME_PT_panel(bpy.types.Panel):
+    bl_label = "Duplication"
+    bl_idname = "DUPLICATION_RENAME_PT_panel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = "BOJ Tools"
+    bl_category = "Tools"
     def draw(self, context):
         layout = self.layout
         prefs_data = context.preferences.addons.get(__name__)
@@ -130,7 +130,7 @@ class BOJ_DUPLICATION_RENAME_PT_panel(bpy.types.Panel):
 
 # Registration
 def register():
-    for cls in (DuplicationRenamerPreferences, OBJECT_OT_ultimateKeybind, BOJ_DUPLICATION_RENAME_PT_panel):
+    for cls in (DuplicationRenamerPreferences, OBJECT_OT_ultimateKeybind, DUPLICATION_RENAME_PT_panel):
         bpy.utils.register_class(cls)
 
     wm = bpy.context.window_manager
@@ -221,7 +221,7 @@ def unregister():
     # User must manually save preferences after enabling/disabling the add-on for changes to persist.
 
     # Unregister classes
-    for cls in reversed((BOJDuplicationRenamerPreferences, OBJECT_OT_ultimateKeybind, BOJ_DUPLICATION_RENAME_PT_panel)):
+    for cls in reversed((DuplicationRenamerPreferences, OBJECT_OT_ultimateKeybind, DUPLICATION_RENAME_PT_panel)):
         bpy.utils.unregister_class(cls)
 
 if __name__ == "__main__":
